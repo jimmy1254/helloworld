@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <array>
 #include <vector>
@@ -25,52 +26,133 @@ int main()
 	//5 6 7 8
 	
 
-	
+
 	array<int, 3> arr = { 1,2,3 };
 	int arraySize = arr.size();
 	arr[0] = 1;
 
 	auto [a1, a2, a3] = arr;
-	
+
 
 	vector<int> myVector = { 11,22 };
 	myVector. push_back(33);//{11,22,33};
 	myVector. push_back(44);// {11,22,33,44};
 
 
-	*/
+
 
 	//myVector에 모든 값을 더한 값을 출력해보자
-	vector<int> myVector = { 11, 22, 33 };
-	int vectorSize = myVector.size();
-	cout << "VectorSize =" << vectorSize << endl;
-
-
-	int sum = 0;
-	//for(int i :myVector) 아래와 같은 의미
-	/*for (auto iter = myVector.begin(); iter < myVector.end(); iter++) 아래와 같은 의미
 	{
-		sum += *iter;
-	}
-	*/
-	for (int i = 0; i < myVector.size(); i++)
-	{
-		sum += myVector[i];
+		vector<int> myVector = { 11, 22, 33 };
+		int vectorSize = myVector.size();
+		cout << "VectorSize =" << vectorSize << endl;
+
+
+		int sum = 0;
+		//for(int i :myVector) 아래와 같은 의미
+		for (auto iter = myVector.begin(); iter < myVector.end(); iter++) 아래와 같은 의미
+		{
+			sum += *iter;
+		}
+
+		for (int i = 0; i < myVector.size(); i++)
+		{
+			sum += myVector[i];
+
+		}
+		cout << "Sum =" << sum << endl;
+
+		//myArray에 모든 값을 1씩 더해보자 {11,22,33} ->{12,23,34}
+
+		int myArray[3] = { 11, 22, 33 };
+		for (int& i : myArray) //& 가 없으면 복사여서 복사본은 바뀌지 않지만 & 넣어줌으로써 참조되어 다른 값들도 변한다
+		{
+			i++;
+		}
+
+		for (int i : myArray)
+		{
+			cout << "myArray[" << i << "]" << i << endl;
+		}
 
 	}
-	cout << "Sum =" << sum << endl;
+
+
+
+	{
+		vector<int> myVector = { 11, 22, 33 };
+
+		int vectorSize = myVector.size();
+		cout << "VectorSize =" << vectorSize << endl;
+
+		int sum = 0;
+
+		int i = 0;
+		while (i < 3)
+		{
+			sum += myVector[i];
+			i++;
+
+		}
+
+
+		sum = 0;
+		i = 0;
+
+		do {
+			sum += myVector[i];
+			i++;
+
+		} while (i > 3);
+
+	}
+
+
+	{
+		int selection = 0;
+
+		do {
+			system("cls");// 이걸 추가하면 다른걸 눌렀을때 다시 초기 상태로 돌아온다
+			cout << "What do you like? : \n";
+			cout << "1) Red\n";
+			cout << "2) Blue\n";
+			cout << "3) Black\n";
+			cout << "4) White\n";
+			cin >> selection;
+		} while (!(4 >= selection && selection >= 1));
+
+		cout << "You like " << selection << endl;
+
+
+	}
 	
-	//myArray에 모든 값을 1씩 더해보자 {11,22,33} ->{12,23,34}
-	
-	int myArray[3] = { 11, 22, 33 };
-	for (int& i : myArray) //& 가 없으면 복사여서 복사본은 바뀌지 않지만 & 넣어줌으로써 참조되어 다른 값들도 변한다
 	{
-		i++;
+		do {
+
+			system("cls");
+			int a, b = { 0 };
+			
+			cout << "Put number [A B] : \n";
+			cin >> a >> b;
+
+			cout << "A + B = " << a + b << endl;
+			cout << "Quit? (Y/N) : ";
+			char q = ' ';
+			cin >> q;
+			if (q == 'Y')
+			{
+				break;
+			}
+			
+		} while (1);
+
+		
+
+
 	}
 
-	for (int i : myArray)
-	{
-		cout << "myArray[" << i << "]" << i << endl;
-	}
+
+
 
 }
+*/
