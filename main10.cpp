@@ -1,4 +1,4 @@
-/*
+
 #include <iostream>
 #include "employeestruct.h"
 
@@ -55,4 +55,3 @@ int main()
 	Employee aaa;
 
 }
-*/
