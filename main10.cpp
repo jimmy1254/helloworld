@@ -61,7 +61,7 @@ int main()
 	bool blsOverlapped = cc1.lsOverlapped(cc2.circle);
 	cout << "lsOverlapped = "
 		<< boolalpha << blsOverlapped << noboolalpha << endl; 
-	//bool 이 0과1만 갖는데 true false 로바꿔주기위해 boolalpha를 써주고 noboolalpha로 끝낸다. 무조건 같이나옴 
+	//bool 이 0과1만 갖는데 true false로 바꿔주기위해 boolalpha를 써주고 noboolalpha로 끝낸다. 무조건 같이나옴 
 	
 
 
