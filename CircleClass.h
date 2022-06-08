@@ -20,8 +20,11 @@ public: //모든곳에서 접근할수있음
 	//-->>public 영역
 
 	CircleClass(); //생성자
+	CircleClass(double x, double y, double radius);
 	~CircleClass(); // 파괴자
 
+
+	void initialize(double x, double y, double radius);
 	double circleArea();// 면적구하기 기능 
 	double getDistance(CircleType target);//target과의 거리 구하기 기능
 	bool lsOverlapped(CircleType target);//target과 오버랩 되어있는지 체크하는 기능

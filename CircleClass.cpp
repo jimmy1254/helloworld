@@ -6,8 +6,20 @@ CircleClass::CircleClass() : circle({ 0 })
 
 }
 
+CircleClass::CircleClass(double x, double y, double radius)
+{
+	initialize(x, y, radius);
+}
+
 CircleClass::~CircleClass()
 {
+}
+
+void CircleClass::initialize(double x, double y, double radius)
+{
+	circle.center.x = x;
+	circle.center.y = y;
+	circle.radius = radius;
 }
 
 double CircleClass::circleArea()

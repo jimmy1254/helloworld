@@ -1,10 +1,11 @@
 
 #include <iostream>
 #include "employeestruct.h"
-
+#include "CircleClass.h"
 
 using namespace std;
 
+/*
 const double PI = 3.141592;
 
 struct C2dType // Circle 2D Type
@@ -38,8 +39,10 @@ bool lsOverlapped(CircleType c1, CircleType c2)
 	double distance = getDistance(c1, c2);
 	return (distance < c1.radius + c2.radius);
 }
+*/
 int main()
 {
+	/*
 	CircleType c1, c2;
 	c1.center.x = 10;
 	c1.center.y = 10;
@@ -51,7 +54,15 @@ int main()
 	bool blsOverlapped = lsOverlapped(c1, c2);
 	cout << "lsOverlapped ="
 		<< boolalpha << blsOverlapped << noboolalpha << endl;
+	*/
 
-	Employee aaa;
+	CircleClass cc1 = { 10, 10, 10 };
+	CircleClass cc2= { 30, 30, 10 };
+	bool blsOverlapped = cc1.lsOverlapped(cc2.circle);
+	cout << "lsOverlapped = "
+		<< boolalpha << blsOverlapped << noboolalpha << endl; 
+	//bool 이 0과1만 갖는데 true false 로바꿔주기위해 boolalpha를 써주고 noboolalpha로 끝낸다. 무조건 같이나옴 
+	
+
 
 }
